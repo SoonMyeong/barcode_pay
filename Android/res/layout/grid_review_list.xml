@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+		<LinearLayout 
+		    android:id="@+id/title_lay"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+     <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     </LinearLayout>
+
+
+    <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+
+         <GridView
+             android:id="@+id/list_main"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentLeft="true"
+             android:verticalSpacing="10dp"
+             android:horizontalSpacing="10dp"
+             android:visibility="gone"
+             android:numColumns="2" />
+         
+     </RelativeLayout>
+		
+
+</RelativeLayout>

@@ -8,7 +8,7 @@ $response = array("error" => FALSE);
 
 $barcode = mt_rand(100000000,999999999);
 $food_image= "http:111111111";
-$url1 = "http://114.200.13.66:11111/barcode/save_barcode/code_";
+$url1 = "http://myserver/barcode/save_barcode/code_";
 $barcode_image="$url1$barcode.png";
 (int)$number = $_POST['number'];
 (int)$point = $_POST['point'];
@@ -64,13 +64,13 @@ if((int)$use_total == (int)$fprice) {
 
 } else {
 		$response["error"] = TRUE;
-		$response["error_msg"] = "Çö±İ°ú Æ÷ÀÎÆ®¸¦ ±İ¾×¿¡ ¸Â°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä";
+		$response["error_msg"] = "í˜„ê¸ˆê³¼ í¬ì¸íŠ¸ë¥¼ ê¸ˆì•¡ì— ë§ê²Œ ì…ë ¥í•´ì£¼ì„¸ìš”";
 		echo json_encode($response);
 }
 
 } else {
 		$response["error"] = TRUE;
-		$response["error_msg"] = "º¸À¯ÇÏ½Å Çö±İ ¶Ç´Â Æ÷ÀÎÆ® º¸´Ù ³ô°Ô ÀÔ·Â ÇÏ¼Ì½À´Ï´Ù";
+		$response["error_msg"] = "ë³´ìœ í•˜ì‹  í˜„ê¸ˆ ë˜ëŠ” í¬ì¸íŠ¸ ë³´ë‹¤ ë†’ê²Œ ì…ë ¥ í•˜ì…¨ìŠµë‹ˆë‹¤";
 		echo json_encode($response);
 }
 

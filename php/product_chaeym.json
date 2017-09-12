@@ -1,0 +1,22 @@
+[{
+        "food_name": "짜장면",
+        "food_image": "http://114.200.13.66:11111/food/4000won/jjajang.jpg",
+        "price": 4000
+    },
+    {
+        "food_name": "짬뽕",
+        "food_image": "http://114.200.13.66:11111/food/4000won/jjambbong.jpg",
+        "price": 4500
+    },
+    {
+        "food_name": "탕수육",
+        "food_image": "http://114.200.13.66:11111/food/5000won/tangsuyug.jpg",
+        "price": 5000
+    },
+    {
+        "food_name": "깐풍기",
+        "food_image": "http://114.200.13.66:11111/food/5000won/gganpong.jpg",
+        "price": 5500
+    }
+
+    ]

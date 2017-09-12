@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nam"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+        <permission android:name="com.example.nam.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.nam.permission.C2D_MESSAGE" />
+    
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    
+
+    <application
+        android:name="com.controller.AppController"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/pay_1">
+        
+        
+        <activity
+            android:name="IntroActivity"
+            android:theme="@style/Theme.NoBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+          <activity
+            android:name="LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            <activity
+            android:name="MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            <activity
+                android:name="NoticeActivity"
+                android:label="공지사항"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+          <activity
+            android:name="StudentActivity"
+            android:label="학생회관"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+          <activity
+            android:name="ChaeumActivity"
+            android:label="채움"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+           <activity
+            android:name="User_product_list"
+            android:label="보관함"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>  
+          <activity
+            android:name="Review_list"
+            android:label="후기 작성 가능한 음식 목록"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>                    
+           <activity
+            android:name="RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+            android:name="com.selected.food_detail"
+            android:label="상품 상세보기"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+      	       android:name="com.selected.all_add_comment"
+      	       android:label="모든 후기보기"
+      	       android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+            android:name="com.selected.food_buy"
+            android:label="구매하기"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+            android:name="com.selected.grid_save_detail"
+            android:label="선택한 내 상품 정보"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+            android:name="com.selected.Product_Review_detail"
+            android:label="후기 작성"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+      	       android:name="com.selected.Notice_detail"
+      	       android:label="상세보기"
+      	       android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   <activity
+            android:name="com.example.nam.Charge_money"
+            android:label="충전"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      	   
+      	   
+<receiver
+android:name="com.google.android.gcm.GCMBroadcastReceiver" 
+android:permission="com.google.android.c2dm.permission.SEND" >
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+<category android:name="com.example.nam" />
+</intent-filter>
+</receiver>
+      	   <service android:name=".GCMIntentService" />
+ 
+    </application>
+
+
+</manifest>

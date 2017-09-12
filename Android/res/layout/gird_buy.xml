@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+		 	   android:paddingTop="20dp"
+		 	   android:text="사용 가능한 현금 :"/>
+			<TextView
+			    android:id="@+id/check_money"
+			    android:paddingTop="10dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="10dp"/>
+			</LinearLayout>
+			
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+          <TextView
+			   android:layout_width="wrap_content"
+			   android:layout_height="wrap_content"
+		 	   android:paddingTop="20dp"
+		 	   android:text="사용 가능한 포인트 :"/>
+			<TextView
+			    android:id="@+id/check_point"
+			    android:paddingTop="10dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+          <TextView
+			   android:layout_width="wrap_content"
+			   android:layout_height="wrap_content"
+		 	   android:paddingTop="20dp"
+		 	   android:text="구매하실 상품명 :"/>
+			<TextView
+			    android:id="@+id/buy_product"
+			    android:paddingTop="10dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+          <TextView
+			   android:layout_width="wrap_content"
+			   android:layout_height="wrap_content"
+		 	   android:paddingTop="20dp"
+		 	   android:text="구매하실 상품가격 :"/>
+			<TextView
+			    android:id="@+id/buy_product_price"
+			    android:paddingTop="10dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="결제방식을 선택해 주세요"/>
+            <Button
+                android:id="@+id/buy_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="현금으로만 결제"/>
+            <Button 
+                android:id="@+id/buy_money_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="현금+포인트 결제"/>
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/invisible_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:visibility="invisible"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="사용하실 현금과 포인트를 입력 후"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="확인버튼을 눌러주세요"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <LinearLayout 
+                    android:id="@+id/cash_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    
+                    <EditText 
+                        android:id="@+id/use_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" 
+                        android:hint="사용할 현금"/>
+                    <EditText
+                        android:id="@+id/use_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" 
+                        android:hint="사용할 포인트"/>  
+                <Button
+                    android:id="@+id/use_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="확인"/>
+     
+                </LinearLayout>
+                
+
+                
+            </LinearLayout>
+               
+            
+        </LinearLayout>
+        
+
+        </LinearLayout>
+        
+    </ScrollView>
+        
